@@ -1,9 +1,9 @@
 workflow "lint" {
   on = "pull_request"
-  resolves = ["izumin5210/actions-reviewdog/golang"]
+  resolves = ["lint and report"]
 }
 
-action "izumin5210/actions-reviewdog/golang" {
-  uses = "izumin5210/actions-reviewdog/golang"
+action "lint and report" {
+  uses = "izumin5210/actions-reviewdog/golang@master"
   secrets = ["GITHUB_TOKEN"]
 }
